@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MediaPlayer/MediaPlayer.h>
 
-@interface MmonViewController : UIViewController
+@interface MmonViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UITableView *table;
+@property(nonatomic, strong) MPMusicPlayerController *player;
+- (IBAction)onGetPushed:(id)sender;
+@property (weak, nonatomic) NSMutableArray *items;
 
 @end

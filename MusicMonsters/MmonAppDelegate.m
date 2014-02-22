@@ -6,13 +6,16 @@
 //  Copyright (c) 2014年 大崎 瑶. All rights reserved.
 //
 
+#import <MediaPlayer/MediaPlayer.h>
 #import "MmonAppDelegate.h"
 
 @implementation MmonAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setMinimumBackgroundFetchInterval:
+     UIApplicationBackgroundFetchIntervalMinimum];
+    
     return YES;
 }
 							
@@ -43,4 +46,18 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)application:(UIApplication *)application performFetchWithCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+
+    MPMusicPlayerController *player = [MPMusicPlayerController iPodMusicPlayer];
+    MPMediaItem *nowPlayingItem = [player nowPlayingItem];
+    //NSString *artist = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtist];
+    NSString *title  = [nowPlayingItem valueForProperty:MPMediaItemPropertyTitle];
+    
+    _viewController.label.text = title;
+    [_viewController.items addObject:title];
+    
+    NSLog(@"fetch: %@", title);
+
+    completionHandler(UIBackgroundFetchResultNewData);
+}
 @end

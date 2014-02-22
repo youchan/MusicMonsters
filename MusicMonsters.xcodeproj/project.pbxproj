@@ -21,6 +21,7 @@
 		BBA52F0218B88C9A0012BF5D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52EE418B88C9A0012BF5D /* UIKit.framework */; };
 		BBA52F0A18B88C9A0012BF5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA52F0818B88C9A0012BF5D /* InfoPlist.strings */; };
 		BBA52F0C18B88C9A0012BF5D /* MusicMonstersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA52F0B18B88C9A0012BF5D /* MusicMonstersTests.m */; };
+		BBA52F1618B8B1020012BF5D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F1518B8B1020012BF5D /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		BBA52F0718B88C9A0012BF5D /* MusicMonstersTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MusicMonstersTests-Info.plist"; sourceTree = "<group>"; };
 		BBA52F0918B88C9A0012BF5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BBA52F0B18B88C9A0012BF5D /* MusicMonstersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicMonstersTests.m; sourceTree = "<group>"; };
+		BBA52F1518B8B1020012BF5D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA52F1618B8B1020012BF5D /* MediaPlayer.framework in Frameworks */,
 				BBA52EE318B88C9A0012BF5D /* CoreGraphics.framework in Frameworks */,
 				BBA52EE518B88C9A0012BF5D /* UIKit.framework in Frameworks */,
 				BBA52EE118B88C9A0012BF5D /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		BBA52EDF18B88C9A0012BF5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBA52F1518B8B1020012BF5D /* MediaPlayer.framework */,
 				BBA52EE018B88C9A0012BF5D /* Foundation.framework */,
 				BBA52EE218B88C9A0012BF5D /* CoreGraphics.framework */,
 				BBA52EE418B88C9A0012BF5D /* UIKit.framework */,
@@ -200,6 +204,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "大崎 瑶";
 				TargetAttributes = {
+					BBA52EDC18B88C9A0012BF5D = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					BBA52EFD18B88C9A0012BF5D = {
 						TestTargetID = BBA52EDC18B88C9A0012BF5D;
 					};

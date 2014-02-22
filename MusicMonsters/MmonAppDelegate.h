@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MmonViewController.h"
 
 @interface MmonAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (retain, nonatomic) MmonViewController *viewController;
 
 @end
