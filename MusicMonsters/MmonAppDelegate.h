@@ -12,6 +12,7 @@
 @interface MmonAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-@property (retain, nonatomic) MmonViewController *viewController;
+@property (retain, nonatomic) NSMutableArray *items;
+@property (retain, nonatomic) NSString *current;
 
 @end

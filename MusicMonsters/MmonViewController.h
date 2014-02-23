@@ -15,6 +15,5 @@
 @property (weak, nonatomic) IBOutlet UITableView *table;
 @property(nonatomic, strong) MPMusicPlayerController *player;
 - (IBAction)onGetPushed:(id)sender;
-@property (weak, nonatomic) NSMutableArray *items;
 
 @end

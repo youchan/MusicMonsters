@@ -22,6 +22,16 @@
 		BBA52F0A18B88C9A0012BF5D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBA52F0818B88C9A0012BF5D /* InfoPlist.strings */; };
 		BBA52F0C18B88C9A0012BF5D /* MusicMonstersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA52F0B18B88C9A0012BF5D /* MusicMonstersTests.m */; };
 		BBA52F1618B8B1020012BF5D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F1518B8B1020012BF5D /* MediaPlayer.framework */; };
+		BBA52F1A18B8E9B50012BF5D /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F1918B8E9B50012BF5D /* AudioToolbox.framework */; };
+		BBA52F1C18B8E9C10012BF5D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F1B18B8E9C10012BF5D /* CFNetwork.framework */; };
+		BBA52F1E18B8E9CF0012BF5D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F1D18B8E9CF0012BF5D /* CoreLocation.framework */; };
+		BBA52F2018B8E9E50012BF5D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F1F18B8E9E50012BF5D /* libz.dylib */; };
+		BBA52F2218B8E9F60012BF5D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F2118B8E9F60012BF5D /* MobileCoreServices.framework */; };
+		BBA52F2418B8EA080012BF5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F2318B8EA080012BF5D /* QuartzCore.framework */; };
+		BBA52F2818B8EA560012BF5D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F2518B8EA560012BF5D /* Security.framework */; };
+		BBA52F2918B8EA560012BF5D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F2618B8EA560012BF5D /* StoreKit.framework */; };
+		BBA52F2A18B8EA560012BF5D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F2718B8EA560012BF5D /* SystemConfiguration.framework */; };
+		BBA52F2E18B8EBCA0012BF5D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA52F2D18B8EBCA0012BF5D /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +65,16 @@
 		BBA52F0918B88C9A0012BF5D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BBA52F0B18B88C9A0012BF5D /* MusicMonstersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MusicMonstersTests.m; sourceTree = "<group>"; };
 		BBA52F1518B8B1020012BF5D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		BBA52F1918B8E9B50012BF5D /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BBA52F1B18B8E9C10012BF5D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		BBA52F1D18B8E9CF0012BF5D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		BBA52F1F18B8E9E50012BF5D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		BBA52F2118B8E9F60012BF5D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		BBA52F2318B8EA080012BF5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		BBA52F2518B8EA560012BF5D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		BBA52F2618B8EA560012BF5D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		BBA52F2718B8EA560012BF5D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		BBA52F2D18B8EBCA0012BF5D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +82,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBA52F2818B8EA560012BF5D /* Security.framework in Frameworks */,
+				BBA52F2918B8EA560012BF5D /* StoreKit.framework in Frameworks */,
+				BBA52F2A18B8EA560012BF5D /* SystemConfiguration.framework in Frameworks */,
+				BBA52F2418B8EA080012BF5D /* QuartzCore.framework in Frameworks */,
+				BBA52F2218B8E9F60012BF5D /* MobileCoreServices.framework in Frameworks */,
+				BBA52F2018B8E9E50012BF5D /* libz.dylib in Frameworks */,
+				BBA52F1E18B8E9CF0012BF5D /* CoreLocation.framework in Frameworks */,
+				BBA52F1C18B8E9C10012BF5D /* CFNetwork.framework in Frameworks */,
+				BBA52F1A18B8E9B50012BF5D /* AudioToolbox.framework in Frameworks */,
 				BBA52F1618B8B1020012BF5D /* MediaPlayer.framework in Frameworks */,
+				BBA52F2E18B8EBCA0012BF5D /* Parse.framework in Frameworks */,
 				BBA52EE318B88C9A0012BF5D /* CoreGraphics.framework in Frameworks */,
 				BBA52EE518B88C9A0012BF5D /* UIKit.framework in Frameworks */,
 				BBA52EE118B88C9A0012BF5D /* Foundation.framework in Frameworks */,
@@ -104,9 +134,19 @@
 		BBA52EDF18B88C9A0012BF5D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BBA52F1518B8B1020012BF5D /* MediaPlayer.framework */,
-				BBA52EE018B88C9A0012BF5D /* Foundation.framework */,
+				BBA52F2D18B8EBCA0012BF5D /* Parse.framework */,
+				BBA52F1F18B8E9E50012BF5D /* libz.dylib */,
+				BBA52F1918B8E9B50012BF5D /* AudioToolbox.framework */,
+				BBA52F1B18B8E9C10012BF5D /* CFNetwork.framework */,
 				BBA52EE218B88C9A0012BF5D /* CoreGraphics.framework */,
+				BBA52F1D18B8E9CF0012BF5D /* CoreLocation.framework */,
+				BBA52EE018B88C9A0012BF5D /* Foundation.framework */,
+				BBA52F1518B8B1020012BF5D /* MediaPlayer.framework */,
+				BBA52F2118B8E9F60012BF5D /* MobileCoreServices.framework */,
+				BBA52F2318B8EA080012BF5D /* QuartzCore.framework */,
+				BBA52F2518B8EA560012BF5D /* Security.framework */,
+				BBA52F2618B8EA560012BF5D /* StoreKit.framework */,
+				BBA52F2718B8EA560012BF5D /* SystemConfiguration.framework */,
 				BBA52EE418B88C9A0012BF5D /* UIKit.framework */,
 				BBA52EFF18B88C9A0012BF5D /* XCTest.framework */,
 			);
@@ -205,6 +245,7 @@
 				ORGANIZATIONNAME = "大崎 瑶";
 				TargetAttributes = {
 					BBA52EDC18B88C9A0012BF5D = {
+						DevelopmentTeam = UBLV4E7KWD;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -390,6 +431,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/youchan/Projects/MusicMonsters,
+					"/Users/youchan/iOS開発",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicMonsters/MusicMonsters-Prefix.pch";
 				INFOPLIST_FILE = "MusicMonsters/MusicMonsters-Info.plist";
@@ -403,6 +450,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/youchan/Projects/MusicMonsters,
+					"/Users/youchan/iOS開発",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MusicMonsters/MusicMonsters-Prefix.pch";
 				INFOPLIST_FILE = "MusicMonsters/MusicMonsters-Info.plist";
@@ -472,6 +525,7 @@
 				BBA52F1118B88C9A0012BF5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BBA52F1218B88C9A0012BF5D /* Build configuration list for PBXNativeTarget "MusicMonstersTests" */ = {
 			isa = XCConfigurationList;
@@ -480,6 +534,7 @@
 				BBA52F1418B88C9A0012BF5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,15 +15,14 @@
 
 @implementation MmonViewController
 
-NSMutableArray *items;
+MmonAppDelegate *appDelegate;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    MmonAppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
-    appDelegate.viewController = self;
+    appDelegate = [[UIApplication sharedApplication] delegate];
 
     self.player = [MPMusicPlayerController iPodMusicPlayer];
     [[NSNotificationCenter defaultCenter] addObserver: self
@@ -33,11 +32,18 @@ NSMutableArray *items;
 
     [self.player beginGeneratingPlaybackNotifications];
     
-    items = [[NSMutableArray alloc] init];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidBecomeActive)
+                                                 name:@"applicationDidBecomeActive"
+                                               object:nil];
     
     self.table.dataSource = self;
     self.table.delegate = self;
 
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"applicationDidBecomeActive" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,23 +62,30 @@ NSMutableArray *items;
     [self refreshTitle];
 }
 
+- (void)applicationDidBecomeActive {
+    NSLog(@"applicationDidBecomeActive");
+    [self.table reloadData];
+}
+
 - (void)refreshTitle {
     MPMediaItem *nowPlayingItem = [self.player nowPlayingItem];
     //NSString *artist = [nowPlayingItem valueForProperty:MPMediaItemPropertyArtist];
     NSString *title  = [nowPlayingItem valueForProperty:MPMediaItemPropertyTitle];
     
-    self.label.text = title;
-    [items addObject:title];
+    if (![appDelegate.current isEqualToString:title]) {
+        appDelegate.current = title;
+        self.label.text = title;
+        [appDelegate.items addObject:title];
+        [self.table reloadData];
+    }
     
     NSLog(@"refresh: %@", title);
-
-    [self.table reloadData];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
          numberOfRowsInSection:(NSInteger)section
 {
-    return [items count];
+    return [appDelegate.items count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -81,7 +94,7 @@ NSMutableArray *items;
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [[UITableViewCell alloc]
                              initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    cell.textLabel.text = [items objectAtIndex:indexPath.row];
+    cell.textLabel.text = [appDelegate.items objectAtIndex:indexPath.row];
     
     return cell;
 }
